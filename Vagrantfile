@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-st2ver = ENV['ST2VER'] ? ENV['ST2VER'] : 'latest'
+st2ver = ENV['ST2VER'] ? ENV['ST2VER'] : 'stable'
 
 VIRTUAL_MACHINES = {
   :node1 => {
