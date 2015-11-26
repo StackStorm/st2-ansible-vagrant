@@ -59,3 +59,7 @@ st2 run ansible.playbook playbook=/etc/ansible/playbooks/nginx.yml extra-vars='w
 
 For all commands executed see: [`ansible.sh`](ansible.sh), [`ansible-galaxy.sh`](ansible-galaxy.sh), [`ansible-vault.sh`](ansible-vault.sh) and [`ansible-playbook.sh`](ansible-playbook.sh),
 which are usual Vagrant shell provisioner scripts.
+
+### Related Resources
+* [Ansible & ChatOps w StackStorm Tutorial & Vagrant demo :rocket:](http://stackstorm.com/2015/06/24/ansible-chatops-get-started-%f0%9f%9a%80/)
+* [Ansible integration Pack](https://github.com/StackStorm/st2contrib/tree/master/packs/ansible)
