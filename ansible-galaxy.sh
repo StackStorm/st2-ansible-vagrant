@@ -20,7 +20,9 @@ echo "| ansible-galaxy list                                                     
 echo "|  -->                                                                                      |"
 echo "| st2 run ansible.galaxy.list                                                               |"
 echo "+-------------------------------------------------------------------------------------------+"
-st2 run ansible.galaxy.list
+#st2 run ansible.galaxy.list
+echo "ansible.galaxy.list command commented out until this fix gets released"
+echo "https://github.com/ansible/ansible/issues/16024"
 
 echo "+-------------------------------------------------------------------------------------------+"
 echo "|              Remove previously installed 'composer' role from Ansible Galaxy              |"

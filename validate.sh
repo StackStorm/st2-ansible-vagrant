@@ -3,11 +3,11 @@ TEST_ACCOUNT_USERNAME="testu"
 TEST_ACCOUNT_PASSWORD="testp"
 
 echo "========= Verifying St2 ========="
-st2ctl restart
+st2ctl status
 sleep 5
 echo "========== Test Action =========="
-TOKEN=`st2 auth ${TEST_ACCOUNT_USERNAME} -p ${TEST_ACCOUNT_PASSWORD} | grep token | awk '{print $4}'`
-ST2_AUTH_TOKEN=${TOKEN} st2 run core.local date
+export ST2_AUTH_TOKEN=`st2 auth -t ${TEST_ACCOUNT_USERNAME} -p ${TEST_ACCOUNT_PASSWORD}`
+st2 run core.local -- date -R
 ACTIONEXIT=$?
 
 echo "=============================="
@@ -28,9 +28,7 @@ else
   echo ""
   echo "  st2 is installed and ready  "
 fi
-if [ ${INSTALL_WEBUI} == "1" ]; then
-  echo "WebUI at http://`hostname`:8080/"
-fi
+echo "WebUI at https://`hostname`/"
 
 echo "=========================================="
 echo ""

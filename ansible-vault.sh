@@ -9,9 +9,9 @@ echo "| ansible-vault encrypt \                                                 
 echo "|   /etc/ansible/playbooks/screen.yml ---vault-password-file=/etc/ansible/vault.txt         |"
 echo "|  -->                                                                                      |"
 echo "| st2 run ansible.vault.encrypt \                                                           |"
-echo "|   vault-password-file=/etc/ansible/vault.txt files=/etc/ansible/playbooks/screen.yml      |"
+echo "|   vault_password_file=/etc/ansible/vault.txt files=/etc/ansible/playbooks/screen.yml      |"
 echo "+-------------------------------------------------------------------------------------------+"
-st2 run ansible.vault.encrypt vault-password-file=/etc/ansible/vault.txt files=/etc/ansible/playbooks/screen.yml
+st2 run ansible.vault.encrypt vault_password_file=/etc/ansible/vault.txt files=/etc/ansible/playbooks/screen.yml
 
 
 echo "+-------------------------------------------------------------------------------------------+"
@@ -21,9 +21,9 @@ echo "| ansible-playbook /etc/ansible/playbooks/screen.yml \                    
 echo "|   --vault-password-file=/etc/ansible/vault.txt --limit='nodes[0]'                         |"
 echo "|  -->                                                                                      |"
 echo "| st2 run ansible.playbook cwd=/etc/ansible \                                               |"
-echo "|   playbook=playbooks/screen.yml vault-password-file=vault.txt limit='nodes[0]'            |"
+echo "|   playbook=playbooks/screen.yml vault_password_file=vault.txt limit='nodes[0]'            |"
 echo "+-------------------------------------------------------------------------------------------+"
-st2 run ansible.playbook cwd=/etc/ansible playbook=playbooks/screen.yml vault-password-file=vault.txt limit='nodes[0]'
+st2 run ansible.playbook cwd=/etc/ansible playbook=playbooks/screen.yml vault_password_file=vault.txt limit='nodes[0]'
 
 echo "+-------------------------------------------------------------------------------------------+"
 echo "|                            Decrypt screen.yml playbook                                    |"
@@ -32,9 +32,9 @@ echo "| ansible-vault decrypt \                                                 
 echo "|   /etc/ansible/playbooks/screen.yml ---vault-password-file=/etc/ansible/vault.txt         |"
 echo "|  -->                                                                                      |"
 echo "| st2 run ansible.vault.decrypt \                                                           |"
-echo "|   cwd=/etc/ansible vault-password-file=vault.txt files=playbooks/screen.yml               |"
+echo "|   cwd=/etc/ansible vault_password_file=vault.txt files=playbooks/screen.yml               |"
 echo "+-------------------------------------------------------------------------------------------+"
-st2 run ansible.vault.decrypt cwd=/etc/ansible vault-password-file=vault.txt files=playbooks/screen.yml
+st2 run ansible.vault.decrypt cwd=/etc/ansible vault_password_file=vault.txt files=playbooks/screen.yml
 
 echo "+-------------------------------------------------------------------------------------------+"
 echo "|                  Replay decrypted screen.yml playbook on second node                      |"
