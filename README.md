@@ -15,12 +15,11 @@ To provision the environment run:
     vagrant up
 
 > Check the results of performed commands in StackStorm control panel:  
-http://www.master:8080/
+https://www.master/
 username: `testu`
 password: `testp`
 
 Don't forget to visit: 
-* http://www.master/
 * http://www.node1/
 * http://www.node2/
 
@@ -46,13 +45,13 @@ st2 run ansible.command_local args='echo $TERM'
 st2 run ansible.command hosts=all args='hostname -i'
 
 # Ping all machines in 'nodes' group
-st2 run ansible.command hosts=nodes module-name=ping
+st2 run ansible.command hosts=nodes module_name=ping
 
 # Install nginx via playbook on all machines 
 st2 run ansible.playbook playbook=/etc/ansible/playbooks/nginx.yml
 
 # Run nginx playbook on latest node machine, set nginx index.html welcome message
-st2 run ansible.playbook playbook=/etc/ansible/playbooks/nginx.yml extra-vars='welcome_name=Tom' limit='nodes[-1]'
+st2 run ansible.playbook playbook=/etc/ansible/playbooks/nginx.yml extra_vars='welcome_name=Tom' limit='nodes[-1]'
 
 ...
 ```

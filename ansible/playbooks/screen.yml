@@ -1,7 +1,8 @@
 ---
 - name: Uninstall screen package
   hosts: all
-  sudo: true
+  become: true
+  become_method: sudo
   tasks:
     - name: Uninstall screen
       apt: name=screen state=absent

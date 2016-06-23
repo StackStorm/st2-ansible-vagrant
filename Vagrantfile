@@ -52,10 +52,8 @@ Vagrant.configure(2) do |config|
           vb.memory = 2048
         end
         # Start shell provisioning for master
-        vm_config.vm.provision :shell, :inline => "curl -sS -k -O https://downloads.stackstorm.net/releases/st2/scripts/st2_deploy.sh"
-        vm_config.vm.provision :shell, :inline => "INSTALL_WEBUI=1 bash -c '. st2_deploy.sh #{st2ver}'"
-        vm_config.vm.provision :shell, :path => "rsyslog.sh"
-        vm_config.vm.provision :shell, :inline => "INSTALL_WEBUI=1 bash -c '/vagrant/validate.sh'"
+        vm_config.vm.provision :shell, :inline => "curl -sSL https://stackstorm.com/packages/install.sh | bash -s -- --user=testu --password=testp"
+        vm_config.vm.provision :shell, :inline => "bash '/vagrant/validate.sh'"
         vm_config.vm.provision :shell, :path => "ansible.sh"
         vm_config.vm.provision :shell, :path => "ansible-galaxy.sh"
         vm_config.vm.provision :shell, :path => "ansible-vault.sh"
