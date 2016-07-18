@@ -3,7 +3,7 @@ StackStorm with Ansible on Vagrant demo
 
 ![StackStorm with Ansible on Vagrant demo](http://i.imgur.com/wwcFk8t.png)
 
-###Introduction
+### Introduction
 This is quick demonstration of the [StackStorm](http://stackstorm.com/) automation platform running with [Ansible configuration management pack](https://github.com/StackStorm/st2contrib/tree/master/packs/ansible).
 
 It will get you up and running with `master` VM running all St2 components as well as Ansible.
@@ -13,6 +13,8 @@ Additionally, it installs 2 clean Ubuntu VMs: `node1`, `node2` and performs ansi
 To provision the environment run:
 
     vagrant up
+
+![StackStorm Ansible Integration](https://cloud.githubusercontent.com/assets/1533818/16920519/97d4a76e-4d16-11e6-817e-1edcb2e16de0.gif)
 
 > Check the results of performed commands in StackStorm control panel:  
 https://www.master/
