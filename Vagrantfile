@@ -25,6 +25,7 @@ end
 
 Vagrant.configure(2) do |config|
   # Global configuration for all boxes
+  config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
   config.hostmanager.enabled = false
   config.hostmanager.manage_host = true
   config.hostmanager.ignore_private_ip = false
