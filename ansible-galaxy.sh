@@ -20,6 +20,7 @@ echo "| ansible-galaxy list                                                     
 echo "|  -->                                                                                      |"
 echo "| st2 run ansible.galaxy.list                                                               |"
 echo "+-------------------------------------------------------------------------------------------+"
+# TODO: Update after release: https://github.com/ansible/ansible/issues/16024
 #st2 run ansible.galaxy.list
 echo "ansible.galaxy.list command commented out until this fix gets released"
 echo "https://github.com/ansible/ansible/issues/16024"
@@ -31,7 +32,10 @@ echo "| ansible-galaxy remove kosssi.composer                                   
 echo "|  -->                                                                                      |"
 echo "| st2 run ansible.galaxy.remove roles=kosssi.composer                                       |"
 echo "+-------------------------------------------------------------------------------------------+"
-st2 run ansible.galaxy.remove roles=kosssi.composer
+# TODO: Update after release: https://github.com/ansible/ansible/issues/16024
+#st2 run ansible.galaxy.remove roles=kosssi.composer
+echo "ansible.galaxy.remove command commented out until this fix gets released"
+echo "https://github.com/ansible/ansible/issues/16024"
 
 echo "Done!"
 exit 0
