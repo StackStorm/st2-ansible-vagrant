@@ -1,8 +1,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-st2ver = ENV['ST2VER'] ? ENV['ST2VER'] : 'stable'
-
 VIRTUAL_MACHINES = {
   :node1 => {
     :ip => '192.168.90.51',
