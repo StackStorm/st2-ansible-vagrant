@@ -16,8 +16,8 @@ To provision the environment run:
 
 > Check the results of performed commands in StackStorm control panel:  
 https://www.master/
-username: `testu`
-password: `testp`
+username: `demo`
+password: `demo`
 
 Don't forget to visit: 
 * http://www.node1/
