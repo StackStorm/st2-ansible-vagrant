@@ -3,6 +3,8 @@ StackStorm with Ansible on Vagrant demo
 
 ![StackStorm with Ansible on Vagrant demo](http://i.imgur.com/wwcFk8t.png)
 
+> Part of the blog: [New In StackStorm: Ansible Integration](https://stackstorm.com/2015/06/05/new-in-stackstorm-ansible-integration/)
+
 ### Introduction
 This is quick demonstration of the [StackStorm](http://stackstorm.com/) automation platform running with [Ansible configuration management pack](https://github.com/StackStorm/st2contrib/tree/master/packs/ansible).
 
