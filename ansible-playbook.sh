@@ -41,5 +41,5 @@ echo "Visit:"
 echo "http://node1/"
 echo "http://node2/"
 echo " "
-echo "https//master/ - for StackStorm control panel"
+echo "https://master/ - for StackStorm control panel"
 exit 0

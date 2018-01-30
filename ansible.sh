@@ -1,5 +1,8 @@
 set -e
 
+echo "####################### Install st2 Ansible pack OS dependencies ############################"
+apt-get -y install gcc libkrb5-dev
+
 echo "############################## Install st2 Ansible pack #####################################"
 # custom repo
 #st2 run packs.install packs=ansible repo_url=https://github.com/armab/st2contrib.git branch=feature/ansible
