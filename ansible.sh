@@ -1,6 +1,7 @@
 set -e
 
 echo "####################### Install st2 Ansible pack OS dependencies ############################"
+apt-get update
 apt-get -y install gcc libkrb5-dev
 
 echo "############################## Install st2 Ansible pack #####################################"
