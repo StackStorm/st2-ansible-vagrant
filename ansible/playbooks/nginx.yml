@@ -5,11 +5,17 @@
   become_method : sudo
   handlers:
     - name: restart nginx
-      service: name=nginx enabled=yes state=restarted
+      service:
+        name: nginx
+        enabled: yes
+        state: restarted
       become_user: root
   tasks:
     - name: Install nginx
-      apt: name=nginx state=present
+      apt:
+       name: nginx
+       state: present
+       update_cache: yes
       notify:
         - restart nginx
 
